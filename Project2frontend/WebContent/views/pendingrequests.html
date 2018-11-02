@@ -1,0 +1,24 @@
+<div class="panel panel-info">
+<div class="panel-heading">
+Pending Requests
+</div>
+<div class="panel-body">
+<ul style="list-style:none;">
+<li ng-repeat="pendingRequest in  pendingRequests">
+{{pendingRequest}}
+<!-- Type of pendingRequest is Friend {id,fromId,toId,status}-->
+{{pendingRequest.fromId.email}}<br>
+{{pendingRequest.fromId.firstname}}&nbsp;{{pendingRequest.fromId.lastname}}<br>
+{{pendingRequest.fromId.role}}<br>
+{{pendingRequest.fromId.phonenumber}}<Br>
+<img src="http://localhost:8085/Project2middleware/getimage?email={{pendingRequest.fromId.email}}" alt="No Image" height="40px" width="40px">
+<button class="btn btn-info" ng-click="acceptRequest(pendingRequest)">Accept</button>
+<!-- IN DAO - update friend set status='A' where id=? 
+-->
+<button class="btn btn-danger" ng-click="deleteRequest(pendingRequest)">Delete</button>
+<!--  in DAO - delete from friend where id=? -->
+<hr>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="panel panel-info">
+<div class="panel-heading">
+Friends
+</div>
+<div class="panel-body">
+<ul style="list-style:none;">
+<li ng-repeat="friendDetail   in   friendsDetails"><!-- Type of friendDetail is User -->
+{{friendDetail.email}}<br>
+{{friendDetail.firstname}}&nbsp;{{friendDetail.lastname}}<br>
+{{friendDetail.phonenumber}}<br>
+{{friendDetail.role}}<br>
+<img src="http://localhost:8085/Project2middleware/getimage?email={{friendDetail.email}}" alt="No Image" height="40px" width="40px">
+<hr>
+</li>
+</ul>
+</div>
+</div>

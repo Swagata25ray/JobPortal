@@ -1,0 +1,11 @@
+<ul style="list-style:none;">
+<li ng-repeat="user in suggestedUsers">
+{{user.firstname}} &nbsp; {{user.lastname}}<br>
+{{user.email}}<br>
+{{user.role}}<br>
+<img src="http://localhost:8085/Project2middleware/getimage?email={{user.email}}" alt="No Image" height="40px" width="40px">
+<button class="btn btn-info" ng-click="sendFriendRequest(user)">Send Friend request</button>
+<hr>
+</li>
+
+</ul>

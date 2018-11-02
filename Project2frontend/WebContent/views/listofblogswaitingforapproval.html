@@ -1,0 +1,12 @@
+<div class="panel panel-info">
+	<div class="panel-heading">Blogs Waiting For Approval</div>
+	<div class="panel-body">
+		<ul style="line-style: none">
+		<li ng-repeat="blogPost in blogsWaitingForApproval">
+		<b><a href="#/getblogswaitingforapproval/{{blogPost.id}}">Blog Title:</b>{{blogPost.blogTitle}}<br>
+		<b>Posted By:</b>{{blogPost.postBy.firstname}}<br>
+		<b>Posted On:</b>{{blogPost.postedOn | date:'dd:MM:yyyy'}}<br>
+		</li>
+		</ul>
+	</div>
+	</div>

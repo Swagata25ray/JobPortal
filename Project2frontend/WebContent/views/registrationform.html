@@ -1,0 +1,18 @@
+<h4>
+<span style="color:red">{{error.errorMsg}}</span>
+<form>
+Enter Email:<input type="email" ng-model="user.email" required><br><br>
+Enter Password: <input type="password" ng-model="user.password" required><br><br>
+Enter Firstname :<input type="text" ng-model="user.firstname" required><br><br>
+Enter lastname: <input type="text" ng-model="user.lastname"><br><br>
+Enter phonenumber:<input type="text" ng-model=user.phonenumber><br><br>
+Select Role : <select ng-model="user.role"><br>
+<option value="STUDENT">Student
+<option value="EMPLOYEE">Employee
+<option value="ALUMNI">Alumni
+
+</select>
+<br><br>
+<button ng-click="registration(user)">Register</button>
+</form>
+</h4>
